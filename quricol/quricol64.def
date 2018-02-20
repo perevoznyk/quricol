@@ -1,0 +1,16 @@
+LIBRARY	"quricol64"
+EXPORTS
+	GeneratePNGW
+	GeneratePNGA
+	GenerateBMPW
+	GenerateBMPA
+	GetHBitmapW	
+	GetHBitmapA
+	GetPNGW
+	GetPNGA	
+	DestroyBuffer
+	GetBackgroundColor
+	GetForegroundColor
+	SetBackgroundColor
+	SetForegroundColor
+
