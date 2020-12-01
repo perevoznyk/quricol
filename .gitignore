@@ -38,3 +38,9 @@
 /.vs/quricol/v14
 /Quricol.Barcode/bin
 /Quricol.Barcode/obj
+/.vs/quricol/v16
+*.dcu
+*.local
+*.identcache
+/quricol/Win32/Release
+/quricol/x64/Release
