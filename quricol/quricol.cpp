@@ -50,6 +50,46 @@ void WINAPI SetForegroundColor(COLORREF value)
 	ForegroundColor = value;
 }
 
+void __stdcall GenerateBMPToClipboardW(LPWSTR text, int margin, int size, int level)
+{
+	HBITMAP bmp = GetHBitmapW(text, margin, size, level);
+	// You can't pass hBitmap to SetClipboardData directly
+	OpenClipboard(NULL);
+
+	DIBSECTION ds{};
+	::GetObject(bmp, sizeof(DIBSECTION), &ds);
+	//make sure compression is BI_RGB
+	ds.dsBmih.biCompression = BI_RGB;
+	HDC hdc = ::GetDC(NULL);
+	HBITMAP hbitmap_ddb = ::CreateDIBitmap(
+		hdc, &ds.dsBmih, CBM_INIT, ds.dsBm.bmBits, (BITMAPINFO*)&ds.dsBmih, DIB_RGB_COLORS);
+	::ReleaseDC(NULL, hdc);
+
+	EmptyClipboard();
+	SetClipboardData(CF_BITMAP, hbitmap_ddb);
+	CloseClipboard();
+}
+
+void __stdcall GenerateBMPToClipboardA(LPSTR text, int margin, int size, int level)
+{
+	HBITMAP bmp = GetHBitmapA(text, margin, size, level);
+	// You can't pass hBitmap to SetClipboardData directly
+	OpenClipboard(NULL);
+
+	DIBSECTION ds{};
+	::GetObject(bmp, sizeof(DIBSECTION), &ds);
+	//make sure compression is BI_RGB
+	ds.dsBmih.biCompression = BI_RGB;
+	HDC hdc = ::GetDC(NULL);
+	HBITMAP hbitmap_ddb = ::CreateDIBitmap(
+		hdc, &ds.dsBmih, CBM_INIT, ds.dsBm.bmBits, (BITMAPINFO*)&ds.dsBmih, DIB_RGB_COLORS);
+	::ReleaseDC(NULL, hdc);
+
+	EmptyClipboard();
+	SetClipboardData(CF_BITMAP, hbitmap_ddb);
+	CloseClipboard();
+}
+
 void WINAPI DestroyBuffer(void* buffer)
 {
 	free(buffer);

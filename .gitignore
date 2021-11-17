@@ -44,3 +44,5 @@
 *.identcache
 /quricol/Win32/Release
 /quricol/x64/Release
+/x64
+/quricol/Win32/Debug

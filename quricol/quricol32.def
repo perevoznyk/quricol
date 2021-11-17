@@ -13,4 +13,6 @@ EXPORTS
 	GetForegroundColor
 	SetBackgroundColor
 	SetForegroundColor
+	GenerateBMPToClipboardA
+	GenerateBMPToClipboardW
 

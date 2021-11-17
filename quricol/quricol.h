@@ -53,6 +53,14 @@ COLORREF WINAPI GetForegroundColor(void);
 void WINAPI SetBackgroundColor(COLORREF value);
 void WINAPI SetForegroundColor(COLORREF value);
 
+void WINAPI GenerateBMPToClipboardW(LPWSTR text, int margin, int size, int level);
+void WINAPI GenerateBMPToClipboardA(LPSTR text, int margin, int size, int level);
+#ifdef UNICODE
+#define GenerateBMPToClipboard  GenerateBMPToClipboardW
+#else
+#define GenerateBMPToClipboard  GenerateBMPToClipboardA
+#endif // !UNICODE
+
 #ifdef __cplusplus
 }
 #endif
