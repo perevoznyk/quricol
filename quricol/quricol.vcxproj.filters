@@ -59,7 +59,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="quricol32.def">
+    <None Include="quricol.def">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

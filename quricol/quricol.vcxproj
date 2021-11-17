@@ -106,7 +106,7 @@
       <AdditionalDependencies>libpngd.lib;zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)32.dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\Extlibs\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ModuleDefinitionFile>quricol32.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>quricol.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(TargetDir)$(ProjectName).lib</ImportLibrary>
@@ -132,7 +132,7 @@
       <AdditionalDependencies>libpngd.lib;zlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)64.dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\Extlibs\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ModuleDefinitionFile>quricol64.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>quricol.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(TargetDir)$(ProjectName).lib</ImportLibrary>
@@ -155,7 +155,7 @@
       <AdditionalDependencies>libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)32.dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\Extlibs\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ModuleDefinitionFile>quricol32.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>quricol.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -183,7 +183,7 @@
       <AdditionalDependencies>libpng.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName)64.dll</OutputFile>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\Extlibs\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ModuleDefinitionFile>quricol64.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>quricol.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -227,7 +227,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="quricol32.def" />
+    <None Include="quricol.def" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bitmaps.h" />
